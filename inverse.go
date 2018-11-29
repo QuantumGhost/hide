@@ -96,21 +96,17 @@ func (h *Hide) SetXor(xor *big.Int) error {
 		return ErrNil
 	}
 
-	int32xor := *xor
-	int32xor.And(&int32xor, int32Max)
-	h.int32xor = &int32xor
+	h.int32xor = new(big.Int).Set(xor)
+	h.int32xor.And(h.int32xor, int32Max)
 
-	int64xor := *xor
-	int64xor.And(&int64xor, int64Max)
-	h.int64xor = &int64xor
+	h.int64xor = new(big.Int).Set(xor)
+	h.int64xor.And(h.int64xor, int64Max)
 
-	uint32xor := *xor
-	uint32xor.And(&uint32xor, uint32Max)
-	h.uint32xor = &uint32xor
+	h.uint32xor = new(big.Int).Set(xor)
+	h.uint32xor.And(h.uint32xor, uint32Max)
 
-	uint64xor := *xor
-	uint64xor.And(&uint64xor, uint64Max)
-	h.uint64xor = &uint64xor
+	h.uint64xor = new(big.Int).Set(xor)
+	h.uint64xor.And(h.uint64xor, uint64Max)
 
 	return nil
 }
