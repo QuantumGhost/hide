@@ -1,4 +1,4 @@
-# h**ID**e  [![Build Status](https://drone.io/github.com/c2h5oh/hide/status.png)](https://drone.io/github.com/c2h5oh/hide/latest)  [![GoDoc](https://godoc.org/github.com/c2h5oh/hide?status.svg)](https://godoc.org/github.com/c2h5oh/hide)  [![Go Report Card](https://goreportcard.com/badge/github.com/c2h5oh/hide)](https://goreportcard.com/report/github.com/c2h5oh/hide)
+# h**ID**e  [![Build Status](https://api.travis-ci.org/c2h5oh/hide.svg?branch=master)](https://travis-ci.org/c2h5oh/hide)  [![GoDoc](https://godoc.org/github.com/c2h5oh/hide?status.svg)](https://godoc.org/github.com/c2h5oh/hide)  [![Go Report Card](https://goreportcard.com/badge/github.com/c2h5oh/hide)](https://goreportcard.com/report/github.com/c2h5oh/hide)
 
 Super easy ID obfuscation that actually works
 
