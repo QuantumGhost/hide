@@ -35,7 +35,7 @@ At the same time autoincrement IDs are great: they maintain sort order, are dens
   * less dense than autoincrement IDs
   * all hell breaks loose when system clock is adjusted
   * require extra logic to avoid duplicates if 2 items are inserted within the smallest unit of time used
-* Base64-encoded IDs (Youtube-like):
+* Base64-encoded IDs (Youtube-like-looking - ID base64 encoding is not all Youtube is doing):
   * they are just regular autoincrement IDs displayed in a different format that is trivial to reverse
 
 
