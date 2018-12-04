@@ -61,7 +61,8 @@ func (h *Hide) SetInt32(prime *big.Int) error {
 	}
 
 	h.int32prime = prime
-	inverse := *prime
+	var inverse big.Int
+	inverse.Set(prime)
 
 	var plusOne big.Int
 	h.int32inverse = inverse.ModInverse(&inverse, plusOne.Add(int32Max, bigOne))
@@ -83,7 +84,8 @@ func (h *Hide) SetInt64(prime *big.Int) error {
 	}
 
 	h.int64prime = prime
-	inverse := *prime
+	var inverse big.Int
+	inverse.Set(prime)
 
 	var plusOne big.Int
 	h.int64inverse = inverse.ModInverse(&inverse, plusOne.Add(int64Max, bigOne))
@@ -125,7 +127,8 @@ func (h *Hide) SetUint32(prime *big.Int) error {
 	}
 
 	h.uint32prime = prime
-	inverse := *prime
+	var inverse big.Int
+	inverse.Set(prime)
 
 	var plusOne big.Int
 	h.uint32inverse = inverse.ModInverse(&inverse, plusOne.Add(uint32Max, bigOne))
@@ -147,7 +150,8 @@ func (h *Hide) SetUint64(prime *big.Int) error {
 	}
 
 	h.uint64prime = prime
-	inverse := *prime
+	var inverse big.Int
+	inverse.Set(prime)
 
 	var plusOne big.Int
 	h.uint64inverse = inverse.ModInverse(&inverse, plusOne.Add(uint64Max, bigOne))
