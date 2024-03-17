@@ -1,0 +1,25 @@
+# https://taskfile.dev
+
+version: '3'
+
+vars:
+  RAPID_CHECKS: 10_000
+  FUZZ_TIME: 2m
+
+tasks:
+  test:quick:
+    cmds:
+      - gocov test -race . | gocov-html > coverage.html
+  test:slow:
+    cmds:
+      - gocov test -rapid.checks={{ .RAPID_CHECKS }} . | gocov-html > coverage.html
+  test:full:
+    deps: [test:slow, fuzz]
+  fuzz:
+    vars:
+      FUZZ_NAMES: Uint32 Uint64 Uint
+    cmds:
+      - for: { var: FUZZ_NAMES }
+        cmd: go test -fuzz= -fuzztime={{ .FUZZ_TIME }} -fuzz='^FuzzHide{{ .ITEM }}$'
+  bench:
+    cmd: go test -bench .
