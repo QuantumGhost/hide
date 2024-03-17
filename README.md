@@ -1,5 +1,19 @@
 # h**ID**e  [![Build Status](https://api.travis-ci.org/c2h5oh/hide.svg?branch=master)](https://travis-ci.org/c2h5oh/hide)  [![GoDoc](https://godoc.org/github.com/c2h5oh/hide?status.svg)](https://godoc.org/github.com/c2h5oh/hide)  [![Go Report Card](https://goreportcard.com/badge/github.com/c2h5oh/hide)](https://goreportcard.com/report/github.com/c2h5oh/hide)
 
+A rewrite of [h**ID**e](https://github.com/c2h5oh/hide) in generics.
+
+Major Changes:
+- Remove `hide.Default`.
+- Only support `uint32` / `uint64` / `uint`. (Obfuscate negative integers will yield incorrect results.)
+- Simplify API: just pass integer values to `Hide.Obfuscate` and `Hide.Deobfuscate`, no need to
+  pass `prime`, `inverse` and `xor` values manually.
+
+
+## Original README
+
+---------------------
+
+
 Super easy ID obfuscation that actually works
 
 ## The why
